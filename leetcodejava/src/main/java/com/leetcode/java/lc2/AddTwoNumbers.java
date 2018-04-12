@@ -16,7 +16,7 @@ public class AddTwoNumbers {
      */
 
     public static void main(String[] args){
-        int[] a1 = new int[]{2, 4, 3, 2, 8};
+        int[] a1 = new int[]{2, 4, 3};
 //        int[] a1 = new int[]{5};
         ListNode l1 = getListFromArray(a1);
         printListNode(l1);
@@ -30,6 +30,12 @@ public class AddTwoNumbers {
         ListNode sumListGS = addTwoNumbersGS(l1, l2);
 //        printListNode(sumList);
         printListNode(sumListGS);
+
+
+        // follow up: non-reversed order
+        ListNode nonRevSum = addTwoNumbersNonRev(l1,l2);
+        printListNode(nonRevSum);
+
     }
 
     public static ListNode getListFromArray(int[] a){
@@ -114,5 +120,30 @@ public class AddTwoNumbers {
         }
         return dummyNode.next;
 
+    }
+
+    // follow up: non-reversed order
+    public static ListNode addTwoNumbersNonRev(ListNode l1, ListNode l2) {
+        ListNode revL1 = reverseList(l1);
+        ListNode revL2 = reverseList(l2);
+        ListNode revSum = addTwoNumbersGS(revL1, revL2);
+        return reverseList(revSum);
+    }
+
+    // auxiliary method
+    public static ListNode reverseList(ListNode l){
+        ListNode dummyNode = new ListNode(0);
+        while(l != null){
+            // temp
+            ListNode temp = l.next;
+
+            // concat
+            l.next = dummyNode.next;
+            dummyNode.next = l;
+
+            // move
+            l = temp;
+        }
+        return dummyNode.next;
     }
 }
