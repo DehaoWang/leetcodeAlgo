@@ -1,4 +1,4 @@
-package com.leetcode.java.model;
+package leetcodejava.src.main.java.model;
 
 /**
  * Created by wangdehao on 18/4/12.

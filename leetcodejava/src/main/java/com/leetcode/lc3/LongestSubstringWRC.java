@@ -1,4 +1,4 @@
-package com.leetcode.java.lc3;
+package leetcodejava.src.main.java.lc3;
 
 import java.util.*;
 

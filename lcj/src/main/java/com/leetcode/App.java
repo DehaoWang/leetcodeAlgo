@@ -1,4 +1,4 @@
-package com.leetcode.java;
+package main.java.com.leetcode;
 
 /**
  * Hello world!

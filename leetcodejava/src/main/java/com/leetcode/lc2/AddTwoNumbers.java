@@ -1,10 +1,6 @@
-package com.leetcode.java.lc2;
+package leetcodejava.src.main.java.lc2;
 
-import com.leetcode.java.model.ListNode;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import leetcodejava.src.main.java.model.ListNode;
 
 /**
  * Created by wangdehao on 18/4/11.

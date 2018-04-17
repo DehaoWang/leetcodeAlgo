@@ -1,4 +1,4 @@
-package com.leetcode.java.lc1;
+package main.java.com.leetcode.lc1;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -73,7 +73,7 @@ public class TwoSum {
         return -1;
     }
 
-    // good solutions: use value2Index to find complement.
+    // good solutions: use value2Index to find complement
     public static int[] twoSumGS(int[] nums, int target){
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         for(int i = 0; i < nums.length; i++){
